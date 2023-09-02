@@ -1,0 +1,12 @@
+name: lu7creative
+version: '1.0-SNAPSHOT'
+main: com.lu7creative.lu7creative.lu7creative
+api-version: '1.20'
+
+commands:
+  lu7creativereload:
+    description: Reload the LU7 Creative plugin configuration
+    usage: /lu7creativereload
+  lu7creativetest:
+    description: Send a test notification
+    usage: /lu7creativetest <message>

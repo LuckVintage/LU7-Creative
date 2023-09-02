@@ -1,0 +1,13 @@
+# Configuration for LU7 Creative Plugin
+# You can obtain your Notification URL and Token from any public nfty instance, or self-host your own.
+
+# Notification URL for sending notifications
+notificationUrl: "https://ntfy.sh/topic-here"
+
+# Notification Token for authorization
+notificationToken: "your_token_here"
+
+# Enable/disable notifications
+enablePlayerJoinNotification: true
+enableServerStartNotification: true
+enableServerStopNotification: true
