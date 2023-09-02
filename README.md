@@ -21,12 +21,6 @@
 
 This is a public version of the custom plugin used on the LU7 Creative Minecraft server. It has been adapted slightly for public use. I created this plugin as a way for me to get notifications through [ntfy](https://ntfy.sh/) whenever certain things happened on my Minecraft server. I thought others might find this plugin helpful, so I published an open-source version.
 
-<div align='center'>
-
-<img src=https://cdn.luckvintage.com/02-09-2023_19-40-16_0TBVbX9zv38ccf9w2V.png alt="Example notification screenshot"/>
-
-</div>
-
 ### :dart: Features
 - Server Start Notifications
 - Server Stop Notifications
@@ -34,6 +28,12 @@ This is a public version of the custom plugin used on the LU7 Creative Minecraft
 - Configure notification preferences in config.yml
 - Reload command
 - Notification test command
+
+<div align='center'>
+
+<img src=https://cdn.luckvintage.com/02-09-2023_19-40-16_0TBVbX9zv38ccf9w2V.png alt="Example notification screenshot"/>
+
+</div>
 
 ## :toolbox: Getting Started
 
