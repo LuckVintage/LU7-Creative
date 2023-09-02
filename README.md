@@ -5,7 +5,7 @@
 <h1>LU7 Creative</h1>
 <p>This is a public version of the custom plugin used on the LU7 Creative Minecraft server.</p>
 
-<h4> <span> · </span> <a href="https://github.com/LuckVintage/LU7 Creative/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/LuckVintage/LU7 Creative/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/LuckVintage/LU7 Creative/issues"> Request Feature </a> </h4>
+<h4> <span> · </span> <a href="https://github.com/LuckVintage/LU7-Creative/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/LuckVintage/LU7-Creative/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/LuckVintage/LU7-Creative/issues"> Request Feature </a> </h4>
 
 
 </div>
