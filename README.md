@@ -12,10 +12,18 @@
 
 # :notebook_with_decorative_cover: Table of Contents
 
+- [Download](#link-download)
 - [About the Project](#star2-about-the-project)
-- [Contributing](#wave-contributing)
+- [Getting Started](#toolbox-getting-started)
+- [Prerequisites](#bangbang-prerequisites)
 - [License](#warning-license)
 
+
+## :link: DOWNLOAD
+
+- Github: https://github.com/LuckVintage/LU7-Creative/releases/download/1.0-SNAPSHOT/lu7creative-1.0-SNAPSHOT.jar
+- SpigotMC: https://www.spigotmc.org/resources/lu7-creative.112440/
+- Modrinth: https://modrinth.com/plugin/lu7-creative
 
 ## :star2: About the Project
 
