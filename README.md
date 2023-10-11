@@ -5,17 +5,25 @@
 <h1>LU7 Creative</h1>
 <p>This is a public version of the custom plugin used on the LU7 Creative Minecraft server.</p>
 
-<h4> <span> · </span> <a href="https://github.com/LuckVintage/LU7 Creative/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/LuckVintage/LU7 Creative/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/LuckVintage/LU7 Creative/issues"> Request Feature </a> </h4>
+<h4> <span> · </span> <a href="https://github.com/LuckVintage/LU7-Creative/blob/main/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/LuckVintage/LU7-Creative/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/LuckVintage/LU7-Creative/issues"> Request Feature </a> </h4>
 
 
 </div>
 
 # :notebook_with_decorative_cover: Table of Contents
 
+- [Download](#link-download)
 - [About the Project](#star2-about-the-project)
-- [Contributing](#wave-contributing)
+- [Getting Started](#toolbox-getting-started)
+- [Prerequisites](#bangbang-prerequisites)
 - [License](#warning-license)
 
+
+## :link: DOWNLOAD
+
+- Github: https://github.com/LuckVintage/LU7-Creative/releases/download/1.0-SNAPSHOT/lu7creative-1.0-SNAPSHOT.jar
+- SpigotMC: https://www.spigotmc.org/resources/lu7-creative.112440/
+- Modrinth: https://modrinth.com/plugin/lu7-creative
 
 ## :star2: About the Project
 
@@ -28,6 +36,12 @@ This is a public version of the custom plugin used on the LU7 Creative Minecraft
 - Configure notification preferences in config.yml
 - Reload command
 - Notification test command
+
+<div align='center'>
+
+<img src=https://cdn.luckvintage.com/02-09-2023_19-40-16_0TBVbX9zv38ccf9w2V.png alt="Example notification screenshot"/>
+
+</div>
 
 ## :toolbox: Getting Started
 
