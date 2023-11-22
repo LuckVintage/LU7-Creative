@@ -39,7 +39,7 @@ This is a public version of the custom plugin used on the LU7 Creative Minecraft
 
 <div align='center'>
 
-<img src=https://cdn.luckvintage.com/02-09-2023_19-40-16_0TBVbX9zv38ccf9w2V.png alt="Example notification screenshot"/>
+<img src=https://cdn.luckvintage.com/LU7-Creative-Plugin-Screenshot.png alt="Example notification screenshot"/>
 
 </div>
 
