@@ -10,3 +10,8 @@ commands:
   lu7creativetest:
     description: Send a test notification
     usage: /lu7creativetest <message>
+
+permissions:
+  lu7creative.presencebypass:
+    description: Bypasses Presence-Notifications for this user.
+    default: false

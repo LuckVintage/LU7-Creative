@@ -9,5 +9,6 @@ notificationToken: "your_token_here"
 
 # Enable/disable notifications
 enablePlayerJoinNotification: true
+enablePlayerQuitNotification: true
 enableServerStartNotification: true
 enableServerStopNotification: true

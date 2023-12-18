@@ -7,6 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.server.PluginDisableEvent;
 import org.bukkit.event.server.PluginEnableEvent;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -40,8 +41,17 @@ public final class lu7creative extends JavaPlugin implements Listener, CommandEx
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        if (config.getBoolean("enablePlayerJoinNotification", true)) {
+        if (config.getBoolean("enablePlayerJoinNotification", true)
+        && !event.getPlayer().hasPermission("lu7creative.presencebypass")) {
             sendNotification("Player Joined", event.getPlayer().getName() + " has just joined the server!", "wave,video_game,player_joined");
+        }
+    }
+
+    @EventHandler
+    public void onPlayerQuit(PlayerQuitEvent event) {
+        if (config.getBoolean("enablePlayerQuitNotification", true)
+        && !event.getPlayer().hasPermission("lu7creative.presencebypass") ) {
+            sendNotification("Player Left", event.getPlayer().getName() + " left the server!", "wave,video_game,player_left");
         }
     }
 
