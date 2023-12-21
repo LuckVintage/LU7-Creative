@@ -21,7 +21,7 @@
 
 ## :link: DOWNLOAD
 
-- Github: https://github.com/LuckVintage/LU7-Creative/releases/download/1.0-SNAPSHOT/lu7creative-1.0-SNAPSHOT.jar
+- Github: https://github.com/LuckVintage/LU7-Creative/releases/download/2.0-SNAPSHOT/lu7creative-2.0-SNAPSHOT.jar
 - SpigotMC: https://www.spigotmc.org/resources/lu7-creative.112440/
 - Modrinth: https://modrinth.com/plugin/lu7-creative
 
