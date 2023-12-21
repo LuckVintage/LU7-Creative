@@ -20,6 +20,8 @@ import java.util.logging.Level;
 public final class lu7creative extends JavaPlugin implements Listener, CommandExecutor {
 
     private FileConfiguration config;
+    private UpdateChecker updateChecker;
+    private String currentVersion = "2.0-SNAPSHOT"; // Replace with your current plugin version
 
     @Override
     public void onEnable() {
@@ -29,8 +31,14 @@ public final class lu7creative extends JavaPlugin implements Listener, CommandEx
         getCommand("lu7creativetest").setExecutor(this);
         loadConfig(); // Load the config
 
+        // Initialize the update checker
+        updateChecker = new UpdateChecker(this, currentVersion);
+
         // Log successful enable
         getLogger().log(Level.INFO, "LU7 Creative plugin has been enabled!");
+
+        // Check for updates after a short delay to ensure the server is fully started
+        getServer().getScheduler().runTaskLater(this, this::checkForUpdates, 20L); // 20 ticks = 1 second
     }
 
     @Override
@@ -42,7 +50,7 @@ public final class lu7creative extends JavaPlugin implements Listener, CommandEx
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         if (config.getBoolean("enablePlayerJoinNotification", true)
-        && !event.getPlayer().hasPermission("lu7creative.presencebypass")) {
+                && !event.getPlayer().hasPermission("lu7creative.presencebypass")) {
             sendNotification("Player Joined", event.getPlayer().getName() + " has just joined the server!", "wave,video_game,player_joined");
         }
     }
@@ -50,7 +58,7 @@ public final class lu7creative extends JavaPlugin implements Listener, CommandEx
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event) {
         if (config.getBoolean("enablePlayerQuitNotification", true)
-        && !event.getPlayer().hasPermission("lu7creative.presencebypass") ) {
+                && !event.getPlayer().hasPermission("lu7creative.presencebypass")) {
             sendNotification("Player Left", event.getPlayer().getName() + " left the server!", "wave,video_game,player_left");
         }
     }
@@ -76,7 +84,7 @@ public final class lu7creative extends JavaPlugin implements Listener, CommandEx
     }
 
     // Helper method to send notifications with specific tags
-    private void sendNotification(String title, String message, String tags) {
+    void sendNotification(String title, String message, String tags) {
         String notificationUrl = config.getString("notificationUrl");
         String notificationToken = config.getString("notificationToken");
 
@@ -143,5 +151,12 @@ public final class lu7creative extends JavaPlugin implements Listener, CommandEx
             }
         }
         return false;
+    }
+
+    // Additional method to check for updates
+    private void checkForUpdates() {
+        if (updateChecker.checkForUpdates()) {
+            getLogger().info("An update is available. Please visit Github to download the latest release: https://github.com/LuckVintage/LU7-Creative");
+        }
     }
 }
