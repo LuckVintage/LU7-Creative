@@ -49,7 +49,7 @@ This is a public version of the custom plugin used on the LU7 Creative Minecraft
 
 ## :toolbox: Getting Started
 
-To install LU7 Creative on your Minecraft server, download the latest release and upload the included JAR file to your Minecraft server plugins folder. Once you've started your server, head to the lu7creative folder and, edit the default config.yml to include your ntfy server and token details, alter the other settings according to your liking. Either restart your entire server or run the /lu7creativereload command. To test that everything is working as intended, you can use the /lu7creativetest <message> command. You should see a test notification appearing in your [ntfy](https://ntfy.sh/) instance. You will not receive join or leave notifications for players with the permission `lu7creative.presencebypasss` set to true  
+To install LU7 Creative on your Minecraft server, download the latest release and upload the included JAR file to your Minecraft server plugins folder. Once you've started your server, head to the lu7creative folder and, edit the default config.yml to include your ntfy server and token details, alter the other settings according to your liking. Either restart your entire server or run the /lu7creativereload command. To test that everything is working as intended, you can use the /lu7creativetest <message> command. You should see a test notification appearing in your [ntfy](https://ntfy.sh/) instance. You will not receive join or leave notifications for players with the permission `lu7creative.presencebypasss` set to false.  
 
 ### :bangbang: Prerequisites
 
