@@ -11,6 +11,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.server.PluginDisableEvent;
 import org.bukkit.event.server.PluginEnableEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bstats.bukkit.Metrics;
 
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -21,7 +22,7 @@ public final class lu7creative extends JavaPlugin implements Listener, CommandEx
 
     private FileConfiguration config;
     private UpdateChecker updateChecker;
-    private String currentVersion = "2.0-SNAPSHOT"; // Replace with your current plugin version
+    private String currentVersion = "3.0-SNAPSHOT"; // Replace with your current plugin version
 
     @Override
     public void onEnable() {
@@ -37,8 +38,18 @@ public final class lu7creative extends JavaPlugin implements Listener, CommandEx
         // Log successful enable
         getLogger().log(Level.INFO, "LU7 Creative plugin has been enabled!");
 
-        // Check for updates after a short delay to ensure the server is fully started
-        getServer().getScheduler().runTaskLater(this, this::checkForUpdates, 20L); // 20 ticks = 1 second
+        if (config.getBoolean("enableUpdateChecker", true)) {
+            // Check for updates after a short delay to ensure the server is fully started
+            getServer().getScheduler().runTaskLater(this, this::checkForUpdates, 20L); // 20 ticks = 1 second
+        }
+
+        
+        // Start bStats
+        if (config.getBoolean("enablebStats", true)) {
+          int pluginId = 20562;
+          Metrics metrics = new Metrics(this, pluginId);
+          getLogger().log(Level.INFO, "bStats metrics has been enabled. To opt-out, change 'enablebStats' to false in config.yml.");
+        }
     }
 
     @Override
