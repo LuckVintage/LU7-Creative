@@ -1,5 +1,6 @@
 package com.lu7creative.lu7creative;
 
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.BufferedReader;
@@ -10,6 +11,7 @@ import java.net.URL;
 
 public class UpdateChecker {
 
+	private FileConfiguration config;
     private static final String VERSION_CHECK_URL = "https://plugin.lu7creative.net/version.txt";
     private String currentVersion;
     private JavaPlugin plugin;
@@ -17,6 +19,7 @@ public class UpdateChecker {
     public UpdateChecker(JavaPlugin plugin, String currentVersion) {
         this.plugin = plugin;
         this.currentVersion = currentVersion;
+        this.config = plugin.getConfig(); // Initialize the config
     }
 
     public boolean checkForUpdates() {
@@ -47,10 +50,12 @@ public class UpdateChecker {
     }
 
     private void sendUpdateNotification(String latestVersion) {
-        // Call the existing method in lu7creative.java to send the notification
-        plugin.getServer().getScheduler().runTask(plugin, () -> {
-            ((lu7creative) plugin).sendNotification("Update Available", "A new version of LU7 Creative is available: " + latestVersion, "update,video_game");
-        });
+        if (config.getBoolean("enableUpdateAvailableNotification", true)) {
+            // Call the existing method in lu7creative.java to send the notification
+            plugin.getServer().getScheduler().runTask(plugin, () -> {
+                ((lu7creative) plugin).sendNotification("Update Available", "A new version of LU7 Creative is available: " + latestVersion, "update,video_game");
+            });
+        }
     }
 
     private void sendErrorNotification(String errorMessage) {
