@@ -1,6 +1,8 @@
 name: lu7creative
-version: '2.0-SNAPSHOT'
+version: '3.0-SNAPSHOT'
 main: com.lu7creative.lu7creative.lu7creative
+author: 'Andrew Peacock'
+description: This is a public version of the custom plugin used on the LU7 Creative Minecraft server. It has been adapted slightly for public use.
 api-version: '1.20'
 
 commands:
