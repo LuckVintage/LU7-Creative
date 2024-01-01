@@ -7,8 +7,13 @@ notificationUrl: "https://ntfy.sh/topic-here"
 # Notification Token for authorization
 notificationToken: "your_token_here"
 
-# Enable/disable notifications
+# Enable/disable ntfy notifications
 enablePlayerJoinNotification: true
 enablePlayerQuitNotification: true
 enableServerStartNotification: true
 enableServerStopNotification: true
+enableUpdateAvailableNotification: true
+
+# Other options
+enableUpdateChecker: true # Automatically check for new plugin updates on server startup
+enablebStats: true # This has no impact on server performance, we strongly encourage keeping bStats enabled
