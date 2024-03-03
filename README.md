@@ -60,3 +60,6 @@ To install LU7 Creative on your Minecraft server, download the latest release an
 ## :warning: License
 
 Distributed under the GNU General Public License v3.0. See LICENSE.txt for more information.
+
+
+<img src=https://bstats.org/signatures/bukkit/LU7%20Creative.svg alt="Plugin Statistics graph from bStats"/>
